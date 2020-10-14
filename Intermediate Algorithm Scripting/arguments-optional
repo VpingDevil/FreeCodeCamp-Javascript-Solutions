@@ -1,0 +1,10 @@
+// Problem Link: freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/arguments-optional
+
+
+function addTogether(a,b) {
+  if(typeof a!=="number") return undefined;
+  return b?((typeof b!="number")?undefined:a+b):(b)=>{
+    if(typeof b=="number") return a+b;
+    return undefined;
+    };
+}
