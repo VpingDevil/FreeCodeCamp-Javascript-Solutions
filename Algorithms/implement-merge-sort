@@ -1,0 +1,17 @@
+// Problem Link: https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/implement-merge-sort
+
+
+function mergeSort(arr) {
+  if(arr.length<2) return arr;
+  let left = mergeSort(arr.slice(0, arr.length/2))
+  let right = mergeSort(arr.slice(arr.length/2,))
+  let merge = []
+  let i=0, j=0;
+  while(i<left.length && j<right.length){
+    if(left[i]<=right[j]) merge.push(left[i++]);
+    else merge.push(right[j++]);
+  }
+  while(i++<left.length) merge.push(left[i-1])
+  while(j++<right.length) merge.push(right[j-1])
+  return merge;
+}
