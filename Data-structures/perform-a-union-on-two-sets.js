@@ -41,7 +41,7 @@ class Set {
   }
   // Only change code below this line
   union(B){
-    var temp = new Set()
+    const temp = new Set()
     for(let i in this.dictionary) temp.add(i);
     for(let i in B.dictionary) temp.add(i);
     return temp;

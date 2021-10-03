@@ -2,10 +2,10 @@
 
 
 function LinkedList() {
-  var length = 0;
-  var head = null;
+  let length = 0;
+  let head = null;
 
-  var Node = function(element) {
+  const Node = function(element) {
     this.element = element;
     this.next = null;
   };
@@ -19,11 +19,11 @@ function LinkedList() {
   };
 
   this.add = function(element) {
-    var node = new Node(element);
+    const node = new Node(element);
     if (head === null) {
       head = node;
     } else {
-      var currentNode = head;
+      let currentNode = head;
 
       while (currentNode.next) {
         currentNode = currentNode.next;
@@ -36,15 +36,15 @@ function LinkedList() {
 
   // Only change code below this line
   this.addAt = (idx, el) =>{
-    if(idx<0 || idx>=length) return false;
+    if(idx < 0 || idx >= length) return false;
     let temp = new Node(el);
-    if(idx===0){
+    if(idx === 0){
       temp.next = head;
       head = temp;
     }else{
-      var id = 0;
-      var p = head;
-      while(++id!=idx-1) p = p.next;
+      let id = 0;
+      let p = head;
+      while( ++id != idx - 1 ) p = p.next;
       temp.next = p.next;
       p.next = temp;
     }

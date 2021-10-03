@@ -2,10 +2,10 @@
 
 
 function LinkedList() {
-  var length = 0;
-  var head = null;
+  let length = 0;
+  let head = null;
 
-  var Node = function(element){
+  const Node = function(element){
     this.element = element;
     this.next = null;
   };
@@ -20,10 +20,10 @@ function LinkedList() {
 
   this.add = function(element){
     // Only change code below this line
-    var temp = new Node(element);
+    let temp = new Node(element);
     if(head===null) head = temp;
     else{
-      var p = head;
+      let p = head;
       while(p.next!==null) p=p.next;
       p.next = temp;
     }

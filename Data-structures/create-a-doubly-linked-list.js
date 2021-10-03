@@ -1,17 +1,17 @@
 // Problem Link: https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/create-a-doubly-linked-list
 
 
-var Node = function(data, prev) {
+const Node = function(data, prev) {
   this.data = data;
   this.prev = prev;
   this.next = null;
 };
-var DoublyLinkedList = function() {
+const DoublyLinkedList = function() {
   this.head = null;
   this.tail = null;
   // Only change code below this line
   this.add = el =>{
-    var temp = new Node(el);
+    let temp = new Node(el);
     if(!this.head){
       temp.prev = null;
       this.head = temp;
@@ -24,7 +24,7 @@ var DoublyLinkedList = function() {
   }
   this.remove = el =>{
     if(!this.head) return null;
-    var p = this.head;
+    let p = this.head;
     if(p.data===el){
       this.head = p.next;
       this.head.prev = null;

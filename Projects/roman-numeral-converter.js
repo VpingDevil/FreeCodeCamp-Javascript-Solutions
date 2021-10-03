@@ -17,7 +17,7 @@ function convertToRoman(num) {
            4: "IV",
            1:  "I"
     }
-    var result = ""
+    let result = ""
     for(let key of Object.keys(ref).sort((a,b)=>b-a).map(a=>parseInt(a))) {
         while(num>=key){
             num -= key

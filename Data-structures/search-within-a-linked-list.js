@@ -2,10 +2,10 @@
 
 
 function LinkedList() {
-  var length = 0;
-  var head = null;
+  let length = 0;
+  let head = null;
 
-  var Node = function(element){
+  const Node = function(element){
     this.element = element;
     this.next = null;
   };
@@ -19,11 +19,11 @@ function LinkedList() {
   };
 
   this.add = function(element){
-    var node = new Node(element);
+    let node = new Node(element);
     if(head === null){
         head = node;
     } else {
-      var currentNode = head;
+      let currentNode = head;
 
       while(currentNode.next){
         currentNode = currentNode.next;
@@ -36,8 +36,8 @@ function LinkedList() {
   };
 
   this.remove = function(element){
-    var currentNode = head;
-    var previousNode;
+    let currentNode = head;
+    let previousNode;
     if(currentNode.element === element){
       head = currentNode.next;
     } else {
@@ -55,9 +55,9 @@ function LinkedList() {
   // Only change code below this line
   this.isEmpty = () => head===null;
   this.indexOf = el =>{
-    var idx = 0;
+    let idx = 0;
     if(head.element===el) return idx;
-    var p = head;
+    let p = head;
     while(p.next!=null && p.element!==el){
       p = p.next;
       idx++;
@@ -67,9 +67,9 @@ function LinkedList() {
   }
   this.elementAt = idx =>{
     if(idx>=length) return undefined
-    var id = 0;
-    var p = head;
-    while(id++!=idx) p = p.next;
+    let id = 0;
+    let p = head;
+    while( id++ != idx) p = p.next;
     return p.element;
   }
   // Only change code above this line
