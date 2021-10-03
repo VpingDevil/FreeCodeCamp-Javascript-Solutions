@@ -2,7 +2,7 @@
 
 
 function checkCashRegister(price, cash, cid) {
-  var change = cash-price;
+  let change = cash-price;
   let total = cid.reduce((sum, el)=>sum+el[1], 0)
   if(change === total) return {status:"CLOSED", change: cid}
   if(change>total) return {status: "INSUFFICIENT_FUNDS", change: []}

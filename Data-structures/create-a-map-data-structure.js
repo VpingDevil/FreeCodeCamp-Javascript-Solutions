@@ -1,7 +1,7 @@
 // Problem Link: https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/create-a-map-data-structure
 
 
-var Map = function() {
+const Map = function() {
   this.collection = {};
   // Only change code below this line
   this.add = (key, value) =>{
